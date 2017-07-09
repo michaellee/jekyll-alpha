@@ -3,6 +3,17 @@
 {% include head.html %}
 <body>
   {{ content }}
-  {% include google_analytics.html %}
+
+<!--
+  This block renders Google Analytics but only renders if the google_analytics
+  variable exists in _config.yml and if the environment for Jekyll is set to
+  production `JEKYLL_ENV=production jekyll build`. It will not render when running
+  `jekyll serve` because by default, the environment is set to `development`.
+ -->
+  {% if site.google_analytics %}
+    {% if jekyll.environment == "production "%}
+{% include google_analytics.html %}
+    {% endif %}
+  {% endif %}
 </body>
 </html>
