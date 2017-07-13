@@ -31,9 +31,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 # Twitter Open Graph meta
 # Twitter handle for your site, if it has a separate handle. If not, then use
 # your personal handle
-twitter_site: @twitter
+twitter_site: "@twitter"
 # Your Twitter handle
-twitter_username: @twitter
+twitter_username: "@twitter"
 
 # Google Analytics
 # Remove # found before google_analytics to include Google Analytics to your
