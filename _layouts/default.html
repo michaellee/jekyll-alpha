@@ -6,14 +6,16 @@
 
   {{ content }}
 
-<!--
-  This block renders Google Analytics but only renders if the google_analytics
-  variable exists in _config.yml and if the environment for Jekyll is set to
-  production `JEKYLL_ENV=production jekyll build`. It will not render when running
-  `jekyll serve` because by default, the environment is set to `development`.
- -->
-    {% if jekyll.environment == "production" and site.google_analytics %}
+  {% include footer.html %}
+
+  {% comment %}
+    This block renders Google Analytics but only renders if the google_analytics
+    variable exists in _config.yml and if the environment for Jekyll is set to
+    production `JEKYLL_ENV=production jekyll build`. It will not render when running
+    `jekyll serve` because by default, the environment is set to `development`.
+  {% endcomment %}
+  {% if jekyll.environment == "production" and site.google_analytics %}
 {% include google_analytics.html %}
-    {% endif %}
+  {% endif %}
 </body>
 </html>
