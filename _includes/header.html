@@ -3,7 +3,9 @@
   {% if site.pages %}
   <nav>
     {% for page in site.pages %}
-    <a href="{{ page.url | relative_url }}">{{ page.title | escape }}</a>
+      {% if page.title and page.autogen == nil %}
+    <a href="{{ page.url | relative_url | remove: "index.html" }}">{{ page.title | escape }}</a>
+      {% endif %}
     {% endfor %}
   </nav>
   {% endif %}

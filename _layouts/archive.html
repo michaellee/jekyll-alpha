@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+{% comment %}
+  {{content}} is grabbed from the file `archive.html`
+{% endcomment %}
+
+{{ content }}
+
+{% for post in paginator.posts %}
+
+<article>
+  <header>
+    <h2>
+      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+    </h2>
+    <div>{{ post.date | date: "%B %-d, %Y" }}</div>
+  </header>
+  <div>
+    {{ post.excerpt }}
+    <a href="{{ post.url | relative_url }}">More...</a>
+  </div>
+</article>
+
+{% endfor %}
+
+{% if paginator.total_pages > 1 %}
+
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Newer stuff</a>
+  {% endif %}
+
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl }}">Older stuff</a>
+  {% endif %}
+
+{% endif %}
