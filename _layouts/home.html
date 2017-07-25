@@ -2,7 +2,13 @@
 layout: default
 ---
 
-{% for post in site.posts %}
+{% include about_block.html %}
+
+{% comment %}
+  Grabs the latest post from `site.posts` and assigns it to a variable `post`
+{% endcomment %}
+
+{% assign post = site.posts.first %}
 
 <article>
   <header>
@@ -16,5 +22,3 @@ layout: default
     <a href="{{ post.url | relative_url }}">More...</a>
   </div>
 </article>
-
-{% endfor %}
