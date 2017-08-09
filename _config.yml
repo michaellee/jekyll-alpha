@@ -44,16 +44,6 @@ twitter_username: "@twitter"
 markdown: kramdown
 plugins:
   - jekyll-feed
-  - jekyll-paginate-v2
-
-# Configuration for jekyll-paginate-v2 plugin
-pagination:
-  enabled: true
-  per_page: 5
-  permalink: "/:num/"
-
-autopages:
-  enabled: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
