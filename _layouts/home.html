@@ -13,7 +13,7 @@ layout: default
 <article>
   <header>
     <h2>
-      <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+      <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
     </h2>
     <div>{{ post.date | date: "%B %-d, %Y" }}</div>
   </header>
