@@ -1,37 +1,45 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# The _config.yml file is used to define site wide variables that can be used
+# throughout your Jekyll project. The variables defined here can be access via
+# the site variable like this {{ site.title }}. Additionally, there are some
+# things that are defined to help configure Jekyll such as the plugins and excludes
+# variables.
 
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# Title for your site
+# Default title that should be used if a page's title isn't defined
 title: Your awesome title
+
 # Site name
 name: Site name
+
+# Your email address
+email: bruce@wayneenterprises.com
+
+# Description of your site. It's used for Google search results as well as your
+# site's feed.xml site description. You can see it being referenced in
+# _includes/head.html
+description: > # this means to ignore newlines until "baseurl:"
+  "He's the hero Gotham deserves, but not the one it needs right now. So we'll
+  hunt him. Because he can take it. Because he's not our hero. He's a silent
+  guardian, a watchful protector. A dark knight." - Lt. James Gordon
+
+# baseurl is the subpath of your site, e.g. /blog
+baseurl: ""
+
+# This is the base URL for your website e.g. http://thebatman.com
+url: ""
+
 # URL to site image. Site image is used when your site is shared via social media
 # 1:1 aspect ratio with a minimum of 144x144 or maximum of 4096x4096 pixels
 # Sizes are references from https://dev.twitter.com/cards/types/summary#reference
+# You can see image being referenced in _includes/og-meta.html and
+# _includes/twitter-meta.html
 image: https://location-of-image.com
-email: your-email@example.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Twitter Open Graph meta
 # Twitter handle for your site, if it has a separate handle. If not, then use
 # your personal handle
 twitter_site: "@twitter"
+
 # Your Twitter handle
 twitter_username: "@twitter"
 
@@ -40,8 +48,10 @@ twitter_username: "@twitter"
 # Jekyll site. Then replace UA-########-# with your Google Analytics tracking ID
 # google_analytics: UA-########-#
 
-# Build settings
+# Markdown flavor
 markdown: kramdown
+
+# Plugins that your Jekyll project uses
 plugins:
   - jekyll-feed
 
