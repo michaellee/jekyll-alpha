@@ -48,6 +48,12 @@ twitter_username: "@twitter"
 # Jekyll site. Then replace UA-########-# with your Google Analytics tracking ID
 # google_analytics: UA-########-#
 
+# Permalinks
+# By default the permalink is in the format of /YYYY/MM/DD/title-of-post-file.html
+# To have clean, simpler permalinks of just the title of the post file, uncomment
+# the property below.
+# permalink: /:title/
+
 # Markdown flavor
 markdown: kramdown
 
