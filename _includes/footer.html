@@ -3,5 +3,5 @@
     site.time generates the current time when the site is built. The filter, date
     is used to show just the year for the date.
   {% endcomment %}
-  &copy; {{ site.time | date: '%Y' }} <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+  &copy; {{ site.time | date: '%Y' }} <a href="{{ "/" | relative_url }}">{{ site.name | escape }}</a>
 </footer>
